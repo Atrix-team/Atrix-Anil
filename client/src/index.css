@@ -1,0 +1,97 @@
+@import url(../public/fonts.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --custom-blue: #00a2dc;
+  --custom-green: #00a657;
+  --custom-black: #262626;
+  --custom-white: #d8d8d8;
+  --Neue-Leiden: "Neue Leiden", sans-serif;
+  --remark: "REMARK", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+body,
+button {
+  font-size: 16px;
+  font-family: "Manrope", serif;
+  background: #2f2f2f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--Neue-Leiden);
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 52px;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 38px;
+  }
+}
+
+button {
+  font-size: 13px;
+}
+p {
+  font-size: 16px;
+}
+
+.hero-dec,
+.hero-btns {
+  font-family: var(--remark);
+}
+
+.typewiter-wraper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--custom-green), var(--custom-blue));
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.typewiter-wraper {
+  font-family: var(--remark);
+}

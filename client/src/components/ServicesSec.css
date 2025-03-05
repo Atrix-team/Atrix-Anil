@@ -1,0 +1,28 @@
+.active-img {
+  opacity: 1;
+  transition: opacity 0.1s ease-in, transform 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+.custom-gradient {
+  background: linear-gradient(var(--custom-black), var(--custom-black))
+      padding-box,
+    linear-gradient(45deg, var(--custom-blue) 20%, var(--custom-green) 80%)
+      border-box;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  color: var(--whitelight);
+  transition: background 0.5s ease-in-out;
+}
+
+:hover.custom-gradient {
+  background: linear-gradient(
+        45deg,
+        var(--custom-blue) 20%,
+        var(--custom-green) 80%
+      )
+      padding-box,
+    linear-gradient(45deg, var(--custom-blue) 20%, var(--custom-green) 80%)
+      border-box;
+  color: var(--whitelight);
+  transition: background 0.5s ease-in-out;
+}
